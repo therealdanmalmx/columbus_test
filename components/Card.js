@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown, faChevronUp  } from '@fortawesome/free-solid-svg-icons'
+import { AnimatePresence } from 'framer-motion';
 
 function Card({data}) {
 	const { productName, productDescription, productInformation, productPrice, productImage} = data;
@@ -36,11 +37,11 @@ function Card({data}) {
 						Show information
 					</p>
 					{show &&
-						<ul className="group transition ease-in-out duration-300 ml-4 mt-2 h-28 col-span-2 text-sm list-disc list-inside">
+						<ul className="ml-4 mt-2 h-28 col-span-2 text-sm list-disc list-inside">
 							{productInformation.size &&<li><span className="font-bold">Size:</span> {productInformation.size }</li>}
-							{productInformation.color &&<li><span className="transition ease-in-out delay-75 duration-300 font-bold">Color:</span>  {productInformation.color }</li>}
-							{productInformation.material &&<li><span className="transition ease-in-out delay-150 duration-300 font-bold">Material:</span>  {productInformation.material }</li>}
-							{productInformation.origin &&<li><span className="transition ease-in-out delay-225 duration-300 font-bold">Origin:</span>  {productInformation.origin }</li>}
+							{productInformation.color &&<li><span className="font-bold">Color:</span>  {productInformation.color }</li>}
+							{productInformation.material &&<li><span className="font-bold">Material:</span>  {productInformation.material }</li>}
+							{productInformation.origin &&<li><span className="font-bold">Origin:</span>  {productInformation.origin }</li>}
 						</ul>
 					}
 				</div>

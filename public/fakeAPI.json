@@ -1,10 +1,11 @@
 [
     {
         "productName": "Super Product 1",
-        "productDescription": "Some text for this super product that eceryone wants to buy...",
+        "productImage" : "https://cdn.pixabay.com/photo/2016/03/09/02/21/blanket-1245171_960_720.jpg",
+        "productDescription": "Some text for this super product that everyone wants to buy...",
         "productInformation": {
-            "size": "large",
-            "color": "blue",
+            "size": "150cm x 300cm",
+            "color": "Rainbow",
             "material": "100% cotton",
             "origin": "Vietnam"
         },
@@ -15,10 +16,11 @@
     },
     {
         "productName": "Super Product 34",
-        "productDescription": "Some text for this super product that eceryone wants to buy...",
+        "productImage": "https://cdn.pixabay.com/photo/2017/08/27/05/33/trousers-2685231_960_720.jpg",
+        "productDescription": "Some text for this super product that everyone wants to buy...",
         "productInformation": {
-            "size": "small",
-            "color": "green",
+            "size": "Small",
+            "color": "Blue",
             "material": "80% cotton, 20% elastine",
             "origin": "Bangladesh"
         },
@@ -29,23 +31,25 @@
     },
     {
         "productName": "Super Product 39",
-        "productDescription": "Some text for this super product that eceryone wants to buy...",
+        "productImage": "https://cdn.pixabay.com/photo/2015/09/08/15/43/scarf-930185_960_720.jpg",
+        "productDescription": "Some text for this super product that everyone wants to buy...",
         "productInformation": {
-            "size": "medium",
-            "color": "whit, purple and yellow",
+            "size": "Medium",
+            "color": "Red, Purple & Yellow",
             "material": "100% polyester",
             "origin": "Germany"
         },
         "productPrice": {
-            "orignalPrice": "1596",
-            "discountedPrice": "2345"
+            "orignalPrice": "2345",
+            "discountedPrice": "1596"
         }
     },
     {
         "productName": "Super Product 56",
-        "productDescription": "Some text for this super product that eceryone wants to buy...",
+        "productImage": "https://cdn.pixabay.com/photo/2014/04/10/11/24/rose-320868_960_720.jpg",
+        "productDescription": "Some text for this super product that everyone wants to buy...",
         "productInformation": {
-            "size": "one size",
+            "size": "",
             "color": "Pomegranate red",
             "material": "",
             "origin": "The Netherlands"
@@ -57,7 +61,8 @@
     },
     {
         "productName": "Super Product 77",
-        "productDescription": "Some text for this super product that eceryone wants to buy...",
+        "productImage": "https://cdn.pixabay.com/photo/2015/05/20/19/45/painting-776053_960_720.jpg",
+        "productDescription": "Some text for this super product that everyone wants to buy...",
         "productInformation": {
             "size": "100cm x 300cm",
             "color": "",
@@ -71,15 +76,16 @@
     },
     {
         "productName": "Super Product 99",
-        "productDescription": "Some text for this super product that eceryone wants to buy...",
+        "productImage": "https://cdn.pixabay.com/photo/2018/05/31/13/13/rainy-day-3443977_960_720.jpg",
+        "productDescription": "Some text for this super product that everyone wants to buy...",
         "productInformation": {
-            "size": "Adjustable",
-            "color": "Extended: green. Compact: grey",
+            "size": "",
+            "color": "Black",
             "material": "Nylon",
             "origin": "The United Kingdom"
         },
         "productPrice": {
-            "orignalPrice": "6792269",
+            "orignalPrice": "2269",
             "discountedPrice": ""
         }
     }

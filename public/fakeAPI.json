@@ -1,0 +1,86 @@
+[
+    {
+        "productName": "Super Product 1",
+        "productDescription": "Some text for this super product that eceryone wants to buy...",
+        "productInformation": {
+            "size": "large",
+            "color": "blue",
+            "material": "100% cotton",
+            "origin": "Vietnam"
+        },
+        "productPrice": {
+            "orignalPrice": "799",
+            "discountedPrice": "569"
+        }
+    },
+    {
+        "productName": "Super Product 34",
+        "productDescription": "Some text for this super product that eceryone wants to buy...",
+        "productInformation": {
+            "size": "small",
+            "color": "green",
+            "material": "80% cotton, 20% elastine",
+            "origin": "Bangladesh"
+        },
+        "productPrice": {
+            "orignalPrice": "579",
+            "discountedPrice": "459"
+        }
+    },
+    {
+        "productName": "Super Product 39",
+        "productDescription": "Some text for this super product that eceryone wants to buy...",
+        "productInformation": {
+            "size": "medium",
+            "color": "whit, purple and yellow",
+            "material": "100% polyester",
+            "origin": "Germany"
+        },
+        "productPrice": {
+            "orignalPrice": "1596",
+            "discountedPrice": "2345"
+        }
+    },
+    {
+        "productName": "Super Product 56",
+        "productDescription": "Some text for this super product that eceryone wants to buy...",
+        "productInformation": {
+            "size": "one size",
+            "color": "Pomegranate red",
+            "material": "",
+            "origin": "The Netherlands"
+        },
+        "productPrice": {
+            "orignalPrice": "69",
+            "discountedPrice": ""
+        }
+    },
+    {
+        "productName": "Super Product 77",
+        "productDescription": "Some text for this super product that eceryone wants to buy...",
+        "productInformation": {
+            "size": "100cm x 300cm",
+            "color": "",
+            "material": "Canvas",
+            "origin": "Fiji"
+        },
+        "productPrice": {
+            "orignalPrice": "679",
+            "discountedPrice": ""
+        }
+    },
+    {
+        "productName": "Super Product 99",
+        "productDescription": "Some text for this super product that eceryone wants to buy...",
+        "productInformation": {
+            "size": "Adjustable",
+            "color": "Extended: green. Compact: grey",
+            "material": "Nylon",
+            "origin": "The United Kingdom"
+        },
+        "productPrice": {
+            "orignalPrice": "6792269",
+            "discountedPrice": ""
+        }
+    }
+]

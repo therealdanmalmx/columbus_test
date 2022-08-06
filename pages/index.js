@@ -34,7 +34,7 @@ export default function Home() {
         <div className="text-center">
           <WishList />
         </div>
-          <div className="text-center font-semibold text-5xl mt-10">
+          <div className="text-center font-semibold text-3xl md:text-4xl lg:text-5xl mt-10">
             {!pushData.length ? '' :
               (<p>Total Price: {sumOfPrices()}</p>)
             }

@@ -1,34 +1,33 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown, faChevronUp  } from '@fortawesome/free-solid-svg-icons'
+import DataContext from '../contexts/DataContext'
 
 function Card({data}) {
 	const { productName, productDescription, productInformation, productPrice, productImage} = data;
-	const [pushData, setPushData] = useState([])
+
+	const {handleClick} = useContext(DataContext)
 	const [show, setShow] = useState(false)
-	const handleClick = (data) => {
-		setPushData([...pushData, data])
-		console.log(data.productName);
-	}
+
   return (
 		<div>
-			<div className="m-4 border h-[600px] w-[300px] grid grid-rows-10 grid-cols-1">
+			<div className="border h-[600px] w-[300px] grid grid-rows-10 grid-cols-1">
 				{/* eslint-disable-next-line @next/next/no-img-element */}
 				<img
 					src={`${productImage}`}
 					alt={productImage}
-					className="relative h-48 w-full object-cover"
+					className="relative h-52 w-full object-cover"
 				/>
-        <h1 className="ml-4 col-span-2 mt-4 text-xl font-semibold">{productName}</h1>
+        <h1 className="ml-4 col-span-2 mt-4 text-2xl font-semibold">{productName}</h1>
 				<p className="mx-4 col-span-2 text-normal">{productDescription}</p>
 				<div className="h-28">
 					<p
-						className="ml-4 text-normal"
+						className="ml-4 text-sm"
 						onClick={() => setShow(!show)}
 					>
 						{ !show &&
-							<FontAwesomeIcon className="transition ease-in-out duration-300 mr-2" icon={faChevronDown} />
+							<FontAwesomeIcon className="mr-2" icon={faChevronDown} />
 						}
 						{show &&
 							<FontAwesomeIcon className="mr-2" icon={faChevronUp} />
@@ -55,17 +54,6 @@ function Card({data}) {
 				<button onClick={() => handleClick(data)} className="justify-end col-span-2 m-4 h-max text-white font-semibold px-2 py-1 bg-black">Add to list</button>
 
 			</div>
-			<>
-			{/* <div>
-					<h2>List</h2>
-					{pushData.map((data, index) => (
-						<p key={index}>{data.productName}</p>
-					))}
-
-			</div> */}
-
-			</>
-
 		</div>
   )
 }

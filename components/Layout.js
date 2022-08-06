@@ -1,12 +1,13 @@
+import { DataProvider } from '../contexts/DataContext';
 
 function Layout({ children }) {
 
   return (
-    <div>
+    <DataProvider>
         <main>
             {children}
         </main>
-    </div>
+    </DataProvider>
   )
 }
 

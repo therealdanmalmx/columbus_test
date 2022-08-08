@@ -1,11 +1,11 @@
-import React from 'react'
-import { useContext } from 'react';
+import { useState, useContext } from 'react'
 import DataContext from '../contexts/DataContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleXmark  } from '@fortawesome/free-solid-svg-icons'
 
 function WishList() {
   const  { pushData, handleClear } = useContext(DataContext);
+
   return (
     <div>
         {pushData && pushData.map((data, index) => (
@@ -19,7 +19,7 @@ function WishList() {
 
               <span className="text-sm md:text-xl md:font-semibold">{data.productName}</span>
               <span className="lg:text-lg text-sm md:text-base">{data.productPrice.discountedPrice ? data.productPrice.discountedPrice : data.productPrice.orignalPrice }:-</span>
-              <span className="mr-2 cursor-pointer" onClick={() => handleClear(index)}><FontAwesomeIcon className="md:mr-4 lg:mr-8 hover:text-red-700 ease-in-out hover:scale-110 duration-500" icon={faCircleXmark} size="lg" /></span>
+              <span className="mr-2 cursor-pointer" onChange={() => handlePersistance(data)} onClick={() => handleClear(index)}><FontAwesomeIcon className="md:mr-4 lg:mr-8 hover:text-red-700 ease-in-out hover:scale-110 duration-500" icon={faCircleXmark} size="lg" /></span>
             </div>
         ))}
     </div>

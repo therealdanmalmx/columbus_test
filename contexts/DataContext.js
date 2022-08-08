@@ -1,10 +1,9 @@
-import { createContext, useState } from 'react';
+import { createContext, useState, useE } from 'react';
 
 export const DataContext = createContext({});
 
 export const DataProvider = ({children}) => {
-
-	const [pushData, setPushData] = useState([])
+	const [pushData, setPushData] = useState([]);
 
 	const handleClick = (data) => {
 		setPushData([...pushData, data])

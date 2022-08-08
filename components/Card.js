@@ -19,7 +19,7 @@ function Card({data}) {
 					alt={productImage}
 					className="relative h-52 w-full object-cover"
 				/>
-        <h1 className="ml-4 col-span-2 mt-4 text-2xl font-semibold">{productName}</h1>
+        		<h1 className="ml-4 col-span-2 mt-4 text-2xl font-semibold">{productName}</h1>
 				<p className="mx-4 col-span-2 text-normal">{productDescription}</p>
 				<div className="h-28">
 					<p
@@ -43,7 +43,7 @@ function Card({data}) {
 						</ul>
 					}
 				</div>
-        <p className="col-span-2">
+        		<p className="col-span-2">
 					{
 						productPrice.discountedPrice ?
 						<span className="ml-4 justify-self-end self-end col-span-2 text-red-600 font-bold">{productPrice.discountedPrice}:- <span className="text-slate-400 font-normal text-sm line-through">{productPrice.orignalPrice}</span></span>

@@ -18,19 +18,19 @@ function Card({ data }) {
 
   return (
     <div>
-      <div className="border h-[600px] w-[300px] grid grid-rows-10 grid-cols-1">
+      <div className="border h-[600px] w-[300px] grid grid-rows-7 grid-cols-1">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={`${productImage}`}
           alt={productImage}
-          className="relative h-52 w-full object-cover"
+          className="relative col-span-2 h-52 w-full object-cover"
         />
-        <h1 className="ml-4 col-span-2 mt-4 text-2xl font-semibold">
+        <h1 className="mx-4 col-span-2 text-2xl font-semibold">
           {productName}
         </h1>
         <p className="mx-4 col-span-2 text-normal">{productDescription}</p>
-        <div className="h-28">
-          <p className="ml-4 text-sm" onClick={() => setShow(!show)}>
+        <div className="h-28 col-span">
+          <p className="mx-4 text-sm" onClick={() => setShow(!show)}>
             {!show && <FontAwesomeIcon className="mr-2" icon={faChevronDown} />}
             {show && <FontAwesomeIcon className="mr-2" icon={faChevronUp} />}
             Show information
@@ -64,23 +64,28 @@ function Card({ data }) {
             </ul>
           )}
         </div>
-        <p className="col-span-2">
-          {productPrice.discountedPrice ? (
-            <span className="ml-4 justify-self-end self-end col-span-2 text-red-600 font-bold">
-              {productPrice.discountedPrice}:-{" "}
-              <span className="text-slate-400 font-normal text-sm line-through">
-                {productPrice.orignalPrice}
-              </span>
-            </span>
-          ) : (
-            <span className="ml-4 just-end col-span-2 font-bold">
-              {productPrice.orignalPrice}:-
-            </span>
-          )}
-        </p>
+        <div className="flex mx-4 justify-between col-span-2">
+          <div className="font-bold">Price:</div>
+          <div>
+            <p>
+              {productPrice.discountedPrice ? (
+                <span className="ml-4 justify-self-end self-end col-span-2 text-red-600 font-bold">
+                  {productPrice.discountedPrice}:-{" "}
+                  <span className="text-slate-400 font-normal text-sm line-through">
+                    {productPrice.orignalPrice}
+                  </span>
+                </span>
+              ) : (
+                <span className="ml-4 just-end col-span-2 font-bold">
+                  {productPrice.orignalPrice}:-
+                </span>
+              )}
+            </p>
+          </div>
+        </div>
         <button
           onClick={() => handleClick(data)}
-          className="justify-end col-span-2 m-4 h-max text-white font-semibold px-2 py-1 lg:hover:bg-slate-700 active:bg-slate-700 lg:active:bg-black lg:transition lg:duration-300 lg:ease-in-out bg-black"
+          className="justify-end col-span-2 mx-4 h-max text-white font-semibold px-2 py-1 lg:hover:bg-slate-700 active:bg-slate-700 lg:active:bg-black lg:transition lg:duration-300 lg:ease-in-out bg-black"
         >
           Add to list
         </button>

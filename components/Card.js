@@ -25,7 +25,7 @@ function Card({ data }) {
           alt={productImage}
           className="relative col-span-2 h-52 w-full object-cover"
         />
-        <h1 className="mx-4 col-span-2 text-2xl font-semibold">
+        <h1 className="mx-4 h-2 col-span-2 text-2xl font-semibold">
           {productName}
         </h1>
         <p className="mx-4 col-span-2 text-normal">{productDescription}</p>

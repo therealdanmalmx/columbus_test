@@ -30,7 +30,10 @@ function Card({ data }) {
         </h1>
         <p className="mx-4 col-span-2 text-normal">{productDescription}</p>
         <div className="h-28 col-span">
-          <p className="mx-4 text-sm" onClick={() => setShow(!show)}>
+          <p
+            className="mx-4 text-sm cursor-pointer"
+            onClick={() => setShow(!show)}
+          >
             {!show && <FontAwesomeIcon className="mr-2" icon={faChevronDown} />}
             {show && <FontAwesomeIcon className="mr-2" icon={faChevronUp} />}
             Show information
@@ -84,7 +87,9 @@ function Card({ data }) {
           </div>
         </div>
         <button
-          onClick={() => handleClick(data)}
+          onClick={() => {
+            handleClick(data);
+          }}
           className="justify-end col-span-2 mx-4 h-max text-white font-semibold px-2 py-1 lg:hover:bg-slate-700 active:bg-slate-700 lg:active:bg-black lg:transition lg:duration-300 lg:ease-in-out bg-black"
         >
           Add to list

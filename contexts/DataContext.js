@@ -1,9 +1,11 @@
-import { createContext, useState, useE } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const DataContext = createContext({});
 
 export const DataProvider = ({ children }) => {
-  const [pushData, setPushData] = useState([]);
+  const [pushData, setPushData] = useState(
+    JSON.parse(localStorage.getItem("wish")) || []
+  );
 
   const handleClick = (data) => {
     setPushData([...pushData, data]);
@@ -11,7 +13,13 @@ export const DataProvider = ({ children }) => {
 
   const handleClear = (index) => {
     setPushData((pushData) => pushData.filter((item, i) => i !== index));
+    localStorage.removeItem("wish", index);
   };
+  useEffect(() => {
+    if (pushData !== []) {
+      localStorage.setItem("wish", JSON.stringify(pushData));
+    }
+  }, [pushData]);
 
   return (
     <DataContext.Provider

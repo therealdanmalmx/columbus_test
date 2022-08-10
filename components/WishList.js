@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import DataContext from "../contexts/DataContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
@@ -32,7 +32,6 @@ function WishList() {
             </span>
             <span
               className="mr-2 cursor-pointer"
-              onChange={() => handlePersistance(data)}
               onClick={() => handleClear(index)}
             >
               <FontAwesomeIcon

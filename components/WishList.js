@@ -12,14 +12,15 @@ function WishList() {
       {pushData &&
         pushData.map((data, index) => (
           <div
-            className="block border w-[300px] md:w-[calc(600px_+_2rem)] lg:w-[calc(900px_+_4rem)] mt-4 flex rounded-full mx-auto justify-between items-center"
+            className="border w-[300px] md:w-[calc(600px_+_2rem)] lg:w-[calc(900px_+_4rem)] mt-4 flex rounded-full mx-auto justify-between items-center"
             key={index}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={`${data.productImage}`}
               alt={data.productImage}
-              className="h-12 w-12 md:w-36 md:h-16 lg:h-24 lg:w-36 relative left-0 rounded-full"
+              priority
+              className="h-12 w-12 md:w-36 md:h-16 lg:h-24 lg:w-36 relative object-cover rounded-l-full"
             />
 
             <span className="text-sm md:text-xl md:font-semibold">

@@ -1,4 +1,5 @@
 import { useState, useContext } from "react";
+import Head from "next/head";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
@@ -17,15 +18,30 @@ function Card({ data }) {
   const [show, setShow] = useState(false);
 
   return (
-    <div>
+    <main>
+      <Head>
+        <title>Super Product Store</title>
+        <meta
+          name="description"
+          content="An online store that sells only super products"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <div className="border h-[600px] w-[300px] grid grid-rows-7 grid-cols-1">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={`${productImage}`}
+        <Image
+          src={productImage}
           alt={productImage}
+          sizes="(min-width: 75em) 20vw,
+          (min-width: 48em) 20vw,
+          20vw"
+          width={100}
+          height={50}
+          layout="responsive"
+          priority
           className="relative col-span-2 h-52 w-full object-cover"
         />
-        <h1 className="mx-4 h-2 col-span-2 text-2xl font-semibold">
+        <h1 className="mx-4 mt-4 h-2 col-span-2 text-2xl font-semibold">
           {productName}
         </h1>
         <p className="mx-4 col-span-2 text-normal">{productDescription}</p>
@@ -74,7 +90,7 @@ function Card({ data }) {
               {productPrice.discountedPrice ? (
                 <span className="ml-4 justify-self-end self-end col-span-2 text-red-600 font-bold">
                   {productPrice.discountedPrice}:-{" "}
-                  <span className="text-slate-400 font-normal text-sm line-through">
+                  <span className="text-slate-600 font-normal text-sm line-through">
                     {productPrice.orignalPrice}
                   </span>
                 </span>
@@ -95,7 +111,7 @@ function Card({ data }) {
           Add to list
         </button>
       </div>
-    </div>
+    </main>
   );
 }
 

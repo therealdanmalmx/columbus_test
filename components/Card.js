@@ -4,6 +4,16 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import DataContext from "../contexts/DataContext";
+import { motion, AnimatePresence } from "framer-motion";
+
+const navVariants = {
+  open: {
+    transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+  },
+  close: {
+    transition: { staggerChildren: 0.05, delayChildren: -1 },
+  },
+};
 
 function Card({ data }) {
   const {
@@ -54,34 +64,54 @@ function Card({ data }) {
             {show && <FontAwesomeIcon className="mr-2" icon={faChevronUp} />}
             Show information
           </p>
-          {show && (
-            <ul className="ml-4 mt-2 h-28 col-span-2 text-sm list-disc list-inside">
-              {productInformation.size && (
-                <li>
-                  <span className="font-bold">Size:</span>{" "}
-                  {productInformation.size}
-                </li>
-              )}
-              {productInformation.color && (
-                <li>
-                  <span className="font-bold">Color:</span>{" "}
-                  {productInformation.color}
-                </li>
-              )}
-              {productInformation.material && (
-                <li>
-                  <span className="duration-300 font-bold">Material:</span>{" "}
-                  {productInformation.material}
-                </li>
-              )}
-              {productInformation.origin && (
-                <li>
-                  <span className="font-bold">Origin:</span>{" "}
-                  {productInformation.origin}
-                </li>
-              )}
-            </ul>
-          )}
+          <AnimatePresence>
+            {show && (
+              <motion.ul
+                initial={{
+                  opacity: 0,
+                  translateY: -25,
+                }}
+                animate={{
+                  opacity: 1,
+                  translateY: 0,
+                }}
+                transition={{
+                  duration: 0.3,
+                  staggerChildren: 0.3,
+                }}
+                exit={{
+                  opacity: 0,
+                  translateY: -25,
+                }}
+                className="group ml-4 mt-2 h-28 col-span-2 text-sm list-disc list-inside"
+              >
+                {productInformation.size && (
+                  <li>
+                    <span className="font-bold">Size:</span>{" "}
+                    {productInformation.size}
+                  </li>
+                )}
+                {productInformation.color && (
+                  <li>
+                    <span className="font-bold">Color:</span>{" "}
+                    {productInformation.color}
+                  </li>
+                )}
+                {productInformation.material && (
+                  <li>
+                    <span className="font-bold">Material:</span>{" "}
+                    {productInformation.material}
+                  </li>
+                )}
+                {productInformation.origin && (
+                  <li>
+                    <span className="font-bold">Origin:</span>{" "}
+                    {productInformation.origin}
+                  </li>
+                )}
+              </motion.ul>
+            )}
+          </AnimatePresence>
         </div>
         <div className="flex mx-4 justify-between col-span-2">
           <div className="font-bold">Price:</div>
@@ -106,7 +136,7 @@ function Card({ data }) {
           onClick={() => {
             handleClick(data);
           }}
-          className="justify-end col-span-2 mx-4 h-max text-white font-semibold px-2 py-1 lg:hover:bg-slate-700 active:bg-slate-700 lg:active:bg-black lg:transition lg:duration-300 lg:ease-in-out bg-black"
+          className="col-span-2 mx-4 h-max text-white font-semibold px-2 py-1 lg:hover:bg-slate-700 active:bg-slate-700 lg:active:bg-black lg:transition lg:duration-300 lg:ease-in-out bg-black"
         >
           Add to list
         </button>

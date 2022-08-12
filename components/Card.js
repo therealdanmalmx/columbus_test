@@ -79,6 +79,10 @@ function Card({ data }) {
                   duration: 0.3,
                   staggerChildren: 0.3,
                 }}
+                exit={{
+                  opacity: 0,
+                  translateY: -25,
+                }}
                 className="group ml-4 mt-2 h-28 col-span-2 text-sm list-disc list-inside"
               >
                 {productInformation.size && (

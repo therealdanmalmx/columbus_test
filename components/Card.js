@@ -45,8 +45,8 @@ function Card({ data }) {
           sizes="(min-width: 75em) 20vw,
           (min-width: 48em) 20vw,
           20vw"
-          width={100}
-          height={50}
+          width={16}
+          height={9}
           layout="responsive"
           priority
           className="relative col-span-2 h-52 w-full object-cover"

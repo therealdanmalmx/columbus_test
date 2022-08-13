@@ -28,17 +28,21 @@ function WishList() {
               opacity: 0,
               translateY: -20,
             }}
-            className="border w-[300px] md:w-[calc(600px_+_2rem)] lg:w-[calc(900px_+_4rem)] mt-4 flex rounded-full mx-auto justify-between items-center"
+            className="border w-[300px] md:w-[calc(600px_+_2rem)] lg:w-[calc(900px_+_4rem)] h-full mt-4 flex rounded-full mx-auto justify-between items-center"
             key={index}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={`${data.productImage}`}
-              alt={data.productImage}
-              priority
-              className="h-12 w-12 md:w-36 md:h-16 lg:h-24 lg:w-36 relative object-cover rounded-l-full"
-            />
-
+            <div className="h-auto w-20 md:w-32 lg:w-36">
+              <Image
+                src={`${data.productImage}`}
+                alt={data.productImage}
+                priority
+                width={16}
+                height={9}
+                layout="responsive"
+                className="absolut top-0 left-0 object-cover rounded-l-full"
+              />
+            </div>
             <span className="text-sm md:text-xl md:font-semibold">
               {data.productName}
             </span>

@@ -39,9 +39,9 @@ function WishList() {
                 priority
                 width={16}
                 height={9}
-                sizes="(min-width: 75em) 20vw,
-                (min-width: 48em) 20vw,
-                20vw"
+                sizes="(min-width: 75em) 10vw,
+                (min-width: 48em) 10vw,
+                10vw"
                 layout="responsive"
                 className="absolut top-0 left-0 object-cover rounded-l-full"
               />

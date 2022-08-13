@@ -1,8 +1,7 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import Card from "../components/Card";
 import TotalPrice from "../components/TotalPrice";
 import WishList from "../components/WishList";
-import { motion } from "framer-motion";
 
 export default function Home() {
   const [retrieveData, setRetrieveData] = useState([]);

@@ -6,15 +6,6 @@ import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import DataContext from "../contexts/DataContext";
 import { motion, AnimatePresence } from "framer-motion";
 
-const navVariants = {
-  open: {
-    transition: { staggerChildren: 0.07, delayChildren: 0.2 },
-  },
-  close: {
-    transition: { staggerChildren: 0.05, delayChildren: -1 },
-  },
-};
-
 function Card({ data }) {
   const {
     productName,

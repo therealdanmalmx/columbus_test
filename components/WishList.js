@@ -1,9 +1,9 @@
-import { useState, useContext, useEffect } from "react";
+import { useContext } from "react";
 import DataContext from "../contexts/DataContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 function WishList() {
   const { pushData, handleClear } = useContext(DataContext);
@@ -37,8 +37,8 @@ function WishList() {
                 src={`${data.productImage}`}
                 alt={data.productImage}
                 priority
-                width={16}
-                height={9}
+                width={3}
+                height={2}
                 sizes="5vw"
                 layout="responsive"
                 className="object-cover rounded-l-full"

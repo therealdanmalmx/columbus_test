@@ -81,33 +81,77 @@ function Card({ data }) {
                 }}
                 exit={{
                   opacity: 0,
-                  translateY: -25,
+                  translateY: -15,
                 }}
                 className="group ml-4 mt-2 h-28 col-span-2 text-sm list-disc list-inside"
               >
                 {productInformation.size && (
-                  <li>
+                  <motion.li
+                    initial={{
+                      opacity: 0,
+                    }}
+                    animate={{
+                      opacity: 1,
+                    }}
+                    transition={{
+                      duration: 0.1,
+                      delay: 0.15,
+                    }}
+                  >
                     <span className="font-bold">Size:</span>{" "}
                     {productInformation.size}
-                  </li>
+                  </motion.li>
                 )}
                 {productInformation.color && (
-                  <li>
+                  <motion.li
+                    initial={{
+                      opacity: 0,
+                    }}
+                    animate={{
+                      opacity: 1,
+                    }}
+                    transition={{
+                      duration: 0.1,
+                      delay: 0.2,
+                    }}
+                  >
                     <span className="font-bold">Color:</span>{" "}
                     {productInformation.color}
-                  </li>
+                  </motion.li>
                 )}
                 {productInformation.material && (
-                  <li>
+                  <motion.li
+                    initial={{
+                      opacity: 0,
+                    }}
+                    animate={{
+                      opacity: 1,
+                    }}
+                    transition={{
+                      duration: 0.1,
+                      delay: 0.25,
+                    }}
+                  >
                     <span className="font-bold">Material:</span>{" "}
                     {productInformation.material}
-                  </li>
+                  </motion.li>
                 )}
                 {productInformation.origin && (
-                  <li>
+                  <motion.li
+                    initial={{
+                      opacity: 0,
+                    }}
+                    animate={{
+                      opacity: 1,
+                    }}
+                    transition={{
+                      duration: 0.1,
+                      delay: 0.3,
+                    }}
+                  >
                     <span className="font-bold">Origin:</span>{" "}
                     {productInformation.origin}
-                  </li>
+                  </motion.li>
                 )}
               </motion.ul>
             )}

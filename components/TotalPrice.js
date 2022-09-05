@@ -6,7 +6,7 @@ function TotalPrice() {
 
   return (
     <div>
-			{!pushData.length ? '' :
+			{!pushData.length ? [] :
 				(<p>Total Price: {sumOfPrices()}</p>)
 			}
     </div>

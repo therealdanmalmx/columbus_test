@@ -1,5 +1,4 @@
 import { useState, useContext } from 'react';
-import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown, faChevronUp  } from '@fortawesome/free-solid-svg-icons'
 import DataContext from '../contexts/DataContext'
@@ -7,7 +6,7 @@ import DataContext from '../contexts/DataContext'
 function Card({data}) {
 	const { productName, productDescription, productInformation, productPrice, productImage} = data;
 
-	const {handleClick} = useContext(DataContext)
+	const {handlePersistance, handleClick} = useContext(DataContext)
 	const [show, setShow] = useState(false)
 
   return (
@@ -51,7 +50,7 @@ function Card({data}) {
 						<span className="ml-4 just-end col-span-2 font-bold">{productPrice.orignalPrice}:-</span>
 					}
 				</p>
-				<button onClick={() => handleClick(data)} className="justify-end col-span-2 m-4 h-max text-white font-semibold px-2 py-1 bg-black">Add to list</button>
+				<button onClick={() => {handleClick(data), handlePersistance(data)}} className="justify-end col-span-2 m-4 h-max text-white font-semibold px-2 py-1 bg-black">Add to list</button>
 
 			</div>
 		</div>

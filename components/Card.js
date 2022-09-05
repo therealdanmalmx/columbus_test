@@ -179,3 +179,5 @@ function Card({ data }) {
     </main>
   );
 }
+
+export default Card;

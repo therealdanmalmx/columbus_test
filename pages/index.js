@@ -1,23 +1,20 @@
-import { useState, useEffect, useContext } from 'react';
-import Card from '../components/Card';
-import TotalPrice from '../components/TotalPrice';
-import WishList from '../components/WishList';
-
+import { useState, useEffect } from "react";
+import Card from "../components/Card";
+import TotalPrice from "../components/TotalPrice";
+import WishList from "../components/WishList";
 
 export default function Home() {
-  const [retrieveData, setRetrieveData] = useState([])
+  const [retrieveData, setRetrieveData] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
-      const res = await fetch('fakeAPI.json');
+      const res = await fetch("fakeAPI.json");
       const data = await res.json();
 
       setRetrieveData(data);
-    }
-    getData()
-
+    };
+    getData();
   }, [setRetrieveData]);
-
 
   return (
     <>
@@ -38,5 +35,5 @@ export default function Home() {
         </div>
       </div>
     </>
-  )
+  );
 }

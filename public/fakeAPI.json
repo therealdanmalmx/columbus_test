@@ -1,92 +1,92 @@
 [
-    {
-        "productName": "Super Product 1",
-        "productImage" : "https://cdn.pixabay.com/photo/2016/03/09/02/21/blanket-1245171_960_720.jpg",
-        "productDescription": "Some text for this super product that everyone wants to buy...",
-        "productInformation": {
-            "size": "150cm x 300cm",
-            "color": "Rainbow",
-            "material": "100% cotton",
-            "origin": "Vietnam"
-        },
-        "productPrice": {
-            "orignalPrice": "799",
-            "discountedPrice": "569"
-        }
+  {
+    "productName": "Super Product 1",
+    "productImage": "https://cdn.pixabay.com/photo/2016/03/09/02/21/blanket-1245171_960_720.jpg",
+    "productDescription": "Some text for this super product that everyone wants to buy...",
+    "productInformation": {
+      "size": "150cm x 300cm",
+      "color": "Rainbow",
+      "material": "100% cotton",
+      "origin": "Vietnam"
     },
-    {
-        "productName": "Super Product 34",
-        "productImage": "https://cdn.pixabay.com/photo/2017/08/27/05/33/trousers-2685231_960_720.jpg",
-        "productDescription": "Some text for this super product that everyone wants to buy...",
-        "productInformation": {
-            "size": "Various",
-            "color": "Blue",
-            "material": "80% cotton, 20% elastine",
-            "origin": "Bangladesh"
-        },
-        "productPrice": {
-            "orignalPrice": "579",
-            "discountedPrice": "459"
-        }
-    },
-    {
-        "productName": "Super Product 39",
-        "productImage": "https://cdn.pixabay.com/photo/2015/09/08/15/43/scarf-930185_960_720.jpg",
-        "productDescription": "Some text for this super product that everyone wants to buy...",
-        "productInformation": {
-            "size": "Medium",
-            "color": "Red, Purple & Yellow",
-            "material": "100% polyester",
-            "origin": "Germany"
-        },
-        "productPrice": {
-            "orignalPrice": "2345",
-            "discountedPrice": "1596"
-        }
-    },
-    {
-        "productName": "Super Product 56",
-        "productImage": "https://cdn.pixabay.com/photo/2014/04/10/11/24/rose-320868_960_720.jpg",
-        "productDescription": "Some text for this super product that everyone wants to buy...",
-        "productInformation": {
-            "size": "",
-            "color": "Pomegranate red",
-            "material": "",
-            "origin": "The Netherlands"
-        },
-        "productPrice": {
-            "orignalPrice": "69",
-            "discountedPrice": ""
-        }
-    },
-    {
-        "productName": "Super Product 77",
-        "productImage": "https://cdn.pixabay.com/photo/2015/05/20/19/45/painting-776053_960_720.jpg",
-        "productDescription": "Some text for this super product that everyone wants to buy...",
-        "productInformation": {
-            "size": "100cm x 300cm",
-            "color": "",
-            "material": "Canvas",
-            "origin": "Fiji"
-        },
-        "productPrice": {
-            "orignalPrice": "679",
-            "discountedPrice": ""
-        }
-    },
-    {
-        "productName": "Super Product 99",
-        "productImage": "https://cdn.pixabay.com/photo/2018/05/31/13/13/rainy-day-3443977_960_720.jpg",
-        "productDescription": "Some text for this super product that everyone wants to buy...",
-        "productInformation": {
-            "size": "",
-            "color": "Black",
-            "material": "Nylon",
-            "origin": "The United Kingdom"
-        },
-        "productPrice": {
-            "orignalPrice": "2269",
-            "discountedPrice": ""
-        }
+    "productPrice": {
+      "orignalPrice": "799",
+      "discountedPrice": "569"
     }
+  },
+  {
+    "productName": "Super Product 34",
+    "productImage": "https://cdn.pixabay.com/photo/2017/08/27/05/33/trousers-2685231_960_720.jpg",
+    "productDescription": "Some text for this super product that everyone wants to buy...",
+    "productInformation": {
+      "size": "Various",
+      "color": "Blue",
+      "material": "80% cotton, 20% elastine",
+      "origin": "Bangladesh"
+    },
+    "productPrice": {
+      "orignalPrice": "579",
+      "discountedPrice": "459"
+    }
+  },
+  {
+    "productName": "Super Product 39",
+    "productImage": "https://cdn.pixabay.com/photo/2015/09/08/15/43/scarf-930185_960_720.jpg",
+    "productDescription": "Some text for this super product that everyone wants to buy...",
+    "productInformation": {
+      "size": "Medium",
+      "color": "Red, Purple & Yellow",
+      "material": "100% polyester",
+      "origin": "Germany"
+    },
+    "productPrice": {
+      "orignalPrice": "2345",
+      "discountedPrice": "1596"
+    }
+  },
+  {
+    "productName": "Super Product 56",
+    "productImage": "https://cdn.pixabay.com/photo/2014/04/10/11/24/rose-320868_960_720.jpg",
+    "productDescription": "Some text for this super product that everyone wants to buy...",
+    "productInformation": {
+      "size": "S/M/L",
+      "color": "Pomegranate red",
+      "material": "",
+      "origin": "The Netherlands"
+    },
+    "productPrice": {
+      "orignalPrice": "69",
+      "discountedPrice": ""
+    }
+  },
+  {
+    "productName": "Super Product 77",
+    "productImage": "https://cdn.pixabay.com/photo/2015/05/20/19/45/painting-776053_960_720.jpg",
+    "productDescription": "Some text for this super product that everyone wants to buy...",
+    "productInformation": {
+      "size": "100cm x 300cm",
+      "color": "",
+      "material": "Canvas",
+      "origin": "Fiji"
+    },
+    "productPrice": {
+      "orignalPrice": "679",
+      "discountedPrice": ""
+    }
+  },
+  {
+    "productName": "Super Product 99",
+    "productImage": "https://cdn.pixabay.com/photo/2018/05/31/13/13/rainy-day-3443977_960_720.jpg",
+    "productDescription": "Some text for this super product that everyone wants to buy...",
+    "productInformation": {
+      "size": "",
+      "color": "Black",
+      "material": "Nylon",
+      "origin": "The United Kingdom"
+    },
+    "productPrice": {
+      "orignalPrice": "2269",
+      "discountedPrice": ""
+    }
+  }
 ]

@@ -1,31 +1,37 @@
-import { createContext, useState, useEffect } from 'react';
+import { createContext, useEffect, useState } from "react";
 
 export const DataContext = createContext({});
 
-export const DataProvider = ({children}) => {
-	const [pushData, setPushData] = useState([]);
+export const DataProvider = ({ children }) => {
+  const [pushData, setPushData] = useState(
+    JSON.parse(localStorage.getItem("wish")) || []
+  );
 
-	const handleClick = (data) => {
-		setPushData([...pushData, data])
-	}
+  const handleClick = (data) => {
+    setPushData([...pushData, data]);
+  };
 
-	const handlePersistance = (data) => {
-		localStorage.setItem('wishList', JSON.stringify(data))
-	}
-
-	const handleClear = (index) => {
-        setPushData(pushData => pushData.filter((item, i) => i !== index));
+  const handleClear = (index) => {
+    setPushData((pushData) => pushData.filter((item, i) => i !== index));
+    localStorage.removeItem("wish", index);
+  };
+  useEffect(() => {
+    if (pushData !== []) {
+      localStorage.setItem("wish", JSON.stringify(pushData));
     }
+  }, [pushData]);
 
-    const sumOfPrices = () => {
-        const subtotal = pushData.reduce((acc, product) => {
-            return acc + Number((product.productPrice.discountedPrice ? product.productPrice.discountedPrice : product.productPrice.orignalPrice))
-        }, 0)
-        return `${subtotal}:-`;
-
-    }
-
-    return <DataContext.Provider value={{pushData, handleClear, handlePersistance, handleClick, sumOfPrices}}>{children}</DataContext.Provider>
-}
+  return (
+    <DataContext.Provider
+      value={{
+        pushData,
+        handleClear,
+        handleClick,
+      }}
+    >
+      {children}
+    </DataContext.Provider>
+  );
+};
 
 export default DataContext;
